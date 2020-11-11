@@ -1,0 +1,28 @@
+﻿@model _18110209_DangNguyenHoaiThu_BTTuan06.Models.User_1
+@{
+    ViewBag.Title = "Index";
+}
+
+<table class="table table-bordered">
+    @foreach (var user in ViewBag.users)
+    {
+        <tr>
+            <td>@user.Username</td>
+            <td>@user.Password</td>
+            <td>
+                @{
+                    if (user.Role == "Admin")
+                    {
+                        <span class="badge badge-danger">Admin</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-warning">Member</span>
+                    }
+                }
+            </td>
+        </tr>
+    }
+</table>
+<h1>Thư</h1>
+<h2>Thư nè</h2>
